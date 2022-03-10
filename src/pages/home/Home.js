@@ -2,6 +2,7 @@ import React from 'react'
 import {createUseStyles} from 'react-jss'
 import RecipeList from '../../components/RecipeList'
 import useFetch from '../../hooks/useFetch.js/useFetch'
+import Recipe from '../recipe/Recipe'
 
 const useStyles = createUseStyles({
   "@global": {
@@ -32,6 +33,7 @@ export default function Home() {
       {error && <p className={classes.error}>{Error}</p>}
       {isPending &&  <p className={classes.error}>Loading...</p>}
       {data && <RecipeList recipes={data} /> }
+      <Recipe />
       </div>
   )
 }

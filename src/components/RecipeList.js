@@ -15,7 +15,7 @@ const useStyles = createUseStyles({
     padding: "16px",
     display: "flex",
     flexDirection: "column",
-    gap: 12,
+    gap: 24,
     background: "#F1F9F9",
     border: "1px solid #313131",
     transition: "all 0.3s ease",
@@ -57,7 +57,7 @@ export default function RecipeList({ recipes }) {
           <h2 className={classes.recipeTitle}>{recipe.title}</h2>
           <p>{recipe.cookingTime} to make.</p>
           <div>{recipe.method.substring(0, 100)}...</div>
-         <Link  className={classes.recipeBtn} to={`/recipes/${recipe.id}`}>  Cook this!</Link>
+         <Link className={classes.recipeBtn} to={`/recipe/${recipe.id}`}>  Cook this!</Link>
         </div>
       ))}
     </section>
